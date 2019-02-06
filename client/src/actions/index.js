@@ -7,7 +7,7 @@ import {
   FETCH_STREAM,
   DELETE_STREAM,
   EDIT_STREAM
-} from './types'
+} from "./types";
 
 export const signIn = userId => {
   return {
@@ -29,12 +29,11 @@ export const createStream = formValues => async dispatch => {
 };
 
 export const fetchStreams = () => async dispatch => {
-  const response = await streams.get('/streams')
+  const response = await streams.get("/streams");
 
-  dispatch({ type: FETCH_STREAMS, payload: response.data })
-}
+  dispatch({ type: FETCH_STREAMS, payload: response.data });
+};
 
-export const fetchStream = (id) => async dispatch => {
-  dispatch({ type: FETCH_STREAM})
-}
-]
+export const fetchStream = id => async dispatch => {
+  dispatch({ type: FETCH_STREAM });
+};
